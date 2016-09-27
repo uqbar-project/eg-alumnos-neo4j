@@ -1,5 +1,7 @@
 # Alumnos de una facultad - Ejemplo puro en Neo4J
 
+![video](video/demo.gif)
+
 ## Objetivo
 Modelar las notas y los grupos de TP de unos alumnos que cursan en la facultad
 
