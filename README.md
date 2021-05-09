@@ -1,5 +1,7 @@
 # Estudiantes de una facultad - Ejemplo puro en Neo4J
 
+![video](./video/alumnes.gif)
+
 ## Objetivo
 Modelar las notas y los grupos de TP de alumnes que cursan una materia de la facultad.
 
@@ -14,5 +16,5 @@ Define una base de grafos de alumnes y cursos + dos tipos de relaciones:
 
 - Instalar Neo4J localmente o vía Docker
 - Abrir un Navegador e ingresar como URL: http://localhost:7474
+- Conectarse a la base (los parámetros por defecto son `neo4j:s3cr3t`)
 - Tenés dos scripts: [el primero te permite crear un juego de datos](./01_create_fixture.cypher) y [el segundo te permite hacer consultas sobre la base de grafos](./02_queries_de_alumnes.cypher)
-

@@ -48,7 +48,7 @@ CREATE
   (gustavososa92)-[:CURSA {grupo: 7, entrega1: ''}]->(phm),
   (tomiaraujo)-[:CURSA {grupo: 8, entrega1: 'Bien +'}]->(phm),
   (sanntibenitez)-[:CURSA {grupo: 8, entrega1: 'Bien +'}]->(phm),
-  (iamafake)-[:CURSA {abandono: true}]->(phm)
+  (fakeStudent)-[:CURSA {abandono: true}]->(phm)
 
 // Para crear alumnes
 // Alumnos 2021
