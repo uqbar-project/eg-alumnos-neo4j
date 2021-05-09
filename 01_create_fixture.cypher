@@ -9,7 +9,7 @@ CREATE (pablovig:Alumne { nombre: 'Vigliero Pablo', usuarioGithub: 'pablovig'})
 CREATE (santijas:Alumne { nombre: 'Ranieri Santiago Alejandro', usuarioGithub: 'santijas'})
 CREATE (loygabriel:Alumne { nombre: 'Loy Gabriel', usuarioGithub: 'LoyGabriel'})
 CREATE (nicolaspucci1989:Alumne { nombre: 'Nicolas Pucci', usuarioGithub: 'nicolaspucci1989'})
-CREATE (iivaan-m:Alumne { nombre: 'Ivan Medina', usuarioGithub: 'iivaan-m'})
+CREATE (iivaanm:Alumne { nombre: 'Ivan Medina', usuarioGithub: 'iivaan-m'})
 CREATE (fedes23:Alumne { nombre: 'Serafini Giraudo Dario Federico', usuarioGithub: 'Fedes23'})
 CREATE (naahueeh:Alumne { nombre: 'Ramos Nahuel', usuarioGithub: 'Naahueeh'})
 CREATE (saanti1535:Alumne { nombre: 'Lopez Roth Santiago ', usuarioGithub: 'Saanti1535'})
@@ -26,31 +26,30 @@ CREATE (fakeStudent: Alumne { nombre: 'Fake Student', usuarioGithub: 'iamafake'}
 CREATE 
   (siuss)-[:AMIGUE]->(facusacchi),
   (santijas)-[:AMIGUE]->(nahuelcf),
-  (marianobottazzi)-[:CURSA {grupo: 1, entrega1: 'Muy Bien'}]->(phm)
-  (edipietro)-[:CURSA {grupo: 1, entrega1: 'Muy Bien'}]->(phm)
-  (ivanlisas)-[:CURSA {grupo: 1, entrega1: 'Muy Bien'}]->(phm)
-  (maxi279)-[:CURSA {grupo: 2, entrega1: 'Muy Bien'}]->(phm)
-  (mgonzalezperna)-[:CURSA {grupo: 2, entrega1: 'Muy Bien'}]->(phm)
-  (joniim23)-[:CURSA {grupo: 2, entrega1: 'Muy Bien'}]->(phm)
-  ()-[:CURSA {grupo: 3, entrega1: 'Muy Bien'}]->(phm)
-  (santijas)-[:CURSA {grupo: 3, entrega1: 'Muy Bien'}]->(phm)
-  (pablovig)-[:CURSA {grupo: 3, entrega1: 'Muy Bien'}]->(phm)
-  (iivaan-m)-[:CURSA {grupo: 4, entrega1: ''}]->(phm)
-  (nicolaspucci1989)-[:CURSA {grupo: 4, entrega1: ''}]->(phm)
-  (fedes23)-[:CURSA {grupo: 4, entrega1: ''}]->(phm)
-  (saanti1535)-[:CURSA {grupo: 5, entrega1: 'Muy Bien'}]->(phm)
-  (santil99)-[:CURSA {grupo: 5, entrega1: 'Muy Bien'}]->(phm)
-  (naahueeh)-[:CURSA {grupo: 5, entrega1: 'Muy Bien'}]->(phm)
-  (maucarun)-[:CURSA {grupo: 6, entrega1: 'Muy Bien'}]->(phm)
-  (facusacchi)-[:CURSA {grupo: 6, entrega1: 'Muy Bien'}]->(phm)
-  (nannfernandez)-[:CURSA {grupo: 6, entrega1: 'Muy Bien'}]->(phm)
-  (nahuelcf)-[:CURSA {grupo: 7, entrega1: ''}]->(phm)
-  (siuss)-[:CURSA {grupo: 7, entrega1: ''}]->(phm)
-  (gustavososa92)-[:CURSA {grupo: 7, entrega1: ''}]->(phm)
-  (tomiaraujo)-[:CURSA {grupo: 8, entrega1: 'Bien +'}]->(phm)
-  (sanntibenitez)-[:CURSA {grupo: 8, entrega1: 'Bien +'}]->(phm)
+  (marianobottazzi)-[:CURSA {grupo: 1, entrega1: 'Muy Bien'}]->(phm),
+  (edipietro)-[:CURSA {grupo: 1, entrega1: 'Muy Bien'}]->(phm),
+  (ivanlisas)-[:CURSA {grupo: 1, entrega1: 'Muy Bien'}]->(phm),
+  (maxi279)-[:CURSA {grupo: 2, entrega1: 'Muy Bien'}]->(phm),
+  (mgonzalezperna)-[:CURSA {grupo: 2, entrega1: 'Muy Bien'}]->(phm),
+  (joniim23)-[:CURSA {grupo: 2, entrega1: 'Muy Bien'}]->(phm),
+  (santijas)-[:CURSA {grupo: 3, entrega1: 'Muy Bien'}]->(phm),
+  (pablovig)-[:CURSA {grupo: 3, entrega1: 'Muy Bien'}]->(phm),
+  (iivaanm)-[:CURSA {grupo: 4, entrega1: ''}]->(phm),
+  (nicolaspucci1989)-[:CURSA {grupo: 4, entrega1: ''}]->(phm),
+  (fedes23)-[:CURSA {grupo: 4, entrega1: ''}]->(phm),
+  (saanti1535)-[:CURSA {grupo: 5, entrega1: 'Muy Bien'}]->(phm),
+  (santil99)-[:CURSA {grupo: 5, entrega1: 'Muy Bien'}]->(phm),
+  (naahueeh)-[:CURSA {grupo: 5, entrega1: 'Muy Bien'}]->(phm),
+  (maucarun)-[:CURSA {grupo: 6, entrega1: 'Muy Bien'}]->(phm),
+  (facusacchi)-[:CURSA {grupo: 6, entrega1: 'Muy Bien'}]->(phm),
+  (nannfernandez)-[:CURSA {grupo: 6, entrega1: 'Muy Bien'}]->(phm),
+  (nahuelcf)-[:CURSA {grupo: 7, entrega1: ''}]->(phm),
+  (siuss)-[:CURSA {grupo: 7, entrega1: ''}]->(phm),
+  (gustavososa92)-[:CURSA {grupo: 7, entrega1: ''}]->(phm),
+  (tomiaraujo)-[:CURSA {grupo: 8, entrega1: 'Bien +'}]->(phm),
+  (sanntibenitez)-[:CURSA {grupo: 8, entrega1: 'Bien +'}]->(phm),
   (iamafake)-[:CURSA {abandono: true}]->(phm)
-    
+
 // Para crear alumnes
 // Alumnos 2021
 // 'CREATE (' + C3 + ':Alumne { nombre: \'' + A3 + '\', usuarioGithub: \'' +	C3 + '\'})'
