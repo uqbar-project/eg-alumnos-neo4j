@@ -1,22 +1,22 @@
--- Quiénes están de novio
-MATCH (a)-[:SALE_CON]->(b) RETURN a,b;
+-- Amigues son los amigues
+MATCH (amigue1)-[:AMIGUE]->(amigue2) RETURN amigue1, amigue2;
 
--- Quiénes dejaron "la materia" (en realidad es el curso)
-MATCH (a)-[:CURSA {abandono: true}]->(b) RETURN a,b;
+-- Saber quienes dejaron "la materia" (en realidad es el curso)
+MATCH (alumne)-[:CURSA {abandono: true}]->(curso) RETURN alumne, curso;
 
 -- no todos tienen la property
 
--- Quiénes están en el grupo 9
-MATCH (a)-[:CURSA {grupo: 9}]->(b) RETURN a,b;
+-- Grupo 9
+MATCH (alumne)-[:CURSA {grupo: 9}]->(curso) RETURN alumne, curso;
 
--- Quiénes cursan K2052
-MATCH (a)-[:CURSA]->(b) RETURN a,b;
+-- Los que cursan PHM
+MATCH (alumne)-[:CURSA]->(curso) RETURN alumne, curso;
 
--- Sólo los nodos
-MATCH (a)-[:CURSA]->(b) RETURN a;
+-- Nodos alumnes que cursan PHM
+MATCH (alumme)-[:CURSA]->(curso) RETURN alumne;
 
--- Para dar de alta la relación bidireccional
-MATCH (a {legajo: 143929}),(b {legajo: 144698}) CREATE (a)-[:SALE_CON]->(b);
+-- Para dar de alta la relación bidireccional de amistad
+MATCH (facu {usuarioGithub: 'facusacchi'}),(santi {usuarioGithub: 'siuss'}) CREATE (facu)-[:AMIGUE]->(santi);
 
--- Para dar de baja una relación
-MATCH (a {legajo: 138227})-[r:SALE_CON]->(b) DELETE r;
+-- Para dar de baja todas las amistades de facu
+MATCH (facu {usuarioGithub: 'facusacchi'})-[amistad: AMIGUE]->(otre) DELETE amistad;
