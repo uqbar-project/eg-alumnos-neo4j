@@ -1,7 +1,7 @@
-# Alumnos de una facultad - Ejemplo puro en Neo4J
+# Estudiantes de una facultad - Ejemplo puro en Neo4J
 
 ## Objetivo
-Modelar las notas y los grupos de TP de unos alumnes que cursan una materia de la facultad.
+Modelar las notas y los grupos de TP de alumnes que cursan una materia de la facultad.
 
 ## Modelo
 
