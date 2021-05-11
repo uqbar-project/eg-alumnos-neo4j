@@ -32,6 +32,7 @@ CREATE
   (maxi279)-[:CURSA {grupo: 2, entrega1: 'Muy Bien'}]->(phm),
   (mgonzalezperna)-[:CURSA {grupo: 2, entrega1: 'Muy Bien'}]->(phm),
   (joniim23)-[:CURSA {grupo: 2, entrega1: 'Muy Bien'}]->(phm),
+  (loygabriel)-[:CURSA {grupo: 3, entrega1: 'Muy Bien'}]->(phm),
   (santijas)-[:CURSA {grupo: 3, entrega1: 'Muy Bien'}]->(phm),
   (pablovig)-[:CURSA {grupo: 3, entrega1: 'Muy Bien'}]->(phm),
   (iivaanm)-[:CURSA {grupo: 4, entrega1: ''}]->(phm),
