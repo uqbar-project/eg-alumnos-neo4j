@@ -1,5 +1,7 @@
 # Estudiantes de una facultad - Ejemplo puro en Neo4J
 
+[![build-neo4j](https://github.com/uqbar-project/eg-alumnos-neo4j/actions/workflows/build.yml/badge.svg)](https://github.com/uqbar-project/eg-alumnos-neo4j/actions/workflows/build.yml)
+
 ## Prerrequisitos
 
 Solo hace falta tener instalado [Docker](https://www.docker.com/)
@@ -23,8 +25,8 @@ Ingresando en un navegador a `http://localhost:7474/` te podés conectar a la ba
 
 Tenés dos scripts: 
 
-- [el primero te permite crear un juego de datos](./01_create_fixture.cypher) y 
-- [el segundo te permite hacer consultas sobre la base de grafos](./02_queries_de_alumnes.cypher)
+- [el primero te permite crear un juego de datos](./scripts/01_create_fixture.cypher) y 
+- [el segundo te permite hacer consultas sobre la base de grafos](./scripts/02_queries_de_alumnes.cypher)
 
 Te mostramos cómo se generan los grafos para luego hacer una consulta:
 
