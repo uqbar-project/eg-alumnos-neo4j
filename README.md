@@ -30,7 +30,7 @@ Tenés dos scripts:
 
 Te mostramos cómo se generan los grafos para luego hacer una consulta:
 
-![crear grafos](video/demo.gif)
+![crear grafos](video/demo2.gif)
 
 ## Objetivo
 
