@@ -1,0 +1,18 @@
+name: build-neo4j
+
+on: 
+  push
+
+jobs:
+  postgresql:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Start Neo4J
+        run: docker-compose -f "docker-compose.yml" up -d --build
+        
+      - name: Stop containers
+        if: always()
+        run: docker-compose -f "docker-compose.yml" down
+
