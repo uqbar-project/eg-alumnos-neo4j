@@ -4,7 +4,7 @@
 
 ## Prerrequisitos
 
-Solo hace falta tener instalado Docker Desktop (el pack docker engine y docker compose), seguí las instrucciones de [esta página](https://phm.uqbar-project.org/material/software) en el párrafo `Docker`.
+Solo hace falta tener instalado algún Desktop de Docker, seguí las instrucciones de [esta página](https://phm.uqbar-project.org/material/software) en el párrafo `Docker`.
 
 ## Instalación
 
@@ -30,7 +30,7 @@ Tenés dos scripts:
 
 Te mostramos cómo se generan los grafos para luego hacer una consulta:
 
-![crear grafos](video/demo2.gif)
+![crear grafos](video/demo.gif)
 
 ## Objetivo
 
