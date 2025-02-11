@@ -1,2 +1,3 @@
 # carpeta donde docker compose genera la base de grafos
 data
+.history
