@@ -12,7 +12,7 @@ jobs:
       - name: Start Neo4J
         run: docker compose -f "docker-compose.yml" up -d --build
         
-     - name: Wait for Neo4j
+      - name: Wait for Neo4j
         run: |
           for i in {1..20}; do
             if docker exec neo4j-ci cypher-shell -u neo4j -p test "RETURN 1;" >/dev/null 2>&1; then
