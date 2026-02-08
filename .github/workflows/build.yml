@@ -15,7 +15,7 @@ jobs:
       - name: Wait for Neo4j
         run: |
           for i in {1..20}; do
-            if docker exec neo4j-ci cypher-shell -u neo4j -p test "RETURN 1;" >/dev/null 2>&1; then
+            if docker exec neo4j-ci cypher-shell -u neo4j -p passw0rd "RETURN 1;" >/dev/null 2>&1; then
               echo "Neo4j is up"
               exit 0
             fi
@@ -27,11 +27,11 @@ jobs:
 
       - name: Run fixture script
         run: |
-          docker exec -i neo4j-ci cypher-shell -u neo4j -p test < scripts/01_create_fixture.cypher
+          docker exec -i neo4j-ci cypher-shell -u neo4j -p passw0rd < scripts/01_create_fixture.cypher
 
       - name: Run queries script
         run: |
-          docker exec -i neo4j-ci cypher-shell -u neo4j -p test < scripts/02_queries_de_alumnes.cypher
+          docker exec -i neo4j-ci cypher-shell -u neo4j -p passw0rd < scripts/02_queries_de_alumnes.cypher
 
       - name: Stop containers
         if: always()
