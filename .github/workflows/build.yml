@@ -7,13 +7,32 @@ jobs:
   neo4j:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Start Neo4J
         run: docker compose -f "docker-compose.yml" up -d --build
         
+     - name: Wait for Neo4j
+        run: |
+          for i in {1..20}; do
+            if docker exec neo4j-ci cypher-shell -u neo4j -p test "RETURN 1;" >/dev/null 2>&1; then
+              echo "Neo4j is up"
+              exit 0
+            fi
+            echo "Waiting for Neo4j..."
+            sleep 3
+          done
+          echo "Neo4j did not start in time"
+          exit 1
+
+      - name: Run fixture script
+        run: |
+          docker exec -i neo4j-ci cypher-shell -u neo4j -p test < scripts/01_create_fixture.cypher
+
+      - name: Run queries script
+        run: |
+          docker exec -i neo4j-ci cypher-shell -u neo4j -p test < scripts/02_queries_de_alumnes.cypher
+
       - name: Stop containers
         if: always()
         run: docker compose -f "docker-compose.yml" down
-
-# TODO: agregar cypher-shell y hacer cat 01-.....cypher | cypher-shell para probar el script
