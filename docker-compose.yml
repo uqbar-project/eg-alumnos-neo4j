@@ -1,5 +1,6 @@
 services:
   neo4j:
+    container_name: neo4j-ci
     image: neo4j:latest
     restart: unless-stopped
     ports:
